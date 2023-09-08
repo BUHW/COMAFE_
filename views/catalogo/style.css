@@ -4,7 +4,7 @@
 
 /* resetar a pagina */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,24 +12,25 @@
     font-family: 'Roboto', sans-serif;
 }
 
-:root{
+:root {
     --laranja: #f78b00;
     --azul: #00285f;
     --cinza: #ededed;
 }
 
-html, body{
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
 
-header{
+header {
     width: 100%;
     height: 500px;
     background: var(--laranja);
 }
 
-.content{
+.content {
     max-width: 1000px;
     min-width: 300px;
     margin: 0 auto;
@@ -38,7 +39,7 @@ header{
     padding: 10px;
 }
 
-nav{
+nav {
     width: 100%;
     height: 125px;
     display: flex;
@@ -47,33 +48,33 @@ nav{
     justify-content: space-between;
 }
 
-.brand{
+.brand {
     font-size: 24px;
     color: var(--azul);
     cursor: pointer;
 }
 
-nav ul{
+nav ul {
     display: flex;
     flex-direction: row;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     padding: 10px;
     cursor: pointer;
 }
 
-nav ul li a{
+nav ul li a {
     color: var(--azul);
     text-decoration: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #00285783;
 }
 
-nav ul button{
+nav ul button {
     border: 1px solid var(--azul);
     background: transparent;
     padding: 8px 40px;
@@ -84,40 +85,40 @@ nav ul button{
     border-radius: 4px;
 }
 
-nav ul button:hover{
+nav ul button:hover {
     transition: background, color 0.6s;
     background: var(--azul);
     color: white;
 }
 
-.content .header-block{
+.content .header-block {
     max-width: 1000px;
     min-height: 300px;
     height: 450px;
     background: var(--azul);
     border-radius: 8px;
-    box-shadow: 1px 0px 10px 0px rgba(0,0,0, 0.5);
-    -webkit-box-shadow: 1px 0px 10px 0px rgba(0,0,0, 0.5);
-    -moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0, 0.5);
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 10;
     padding: 10px;
 }
 
-.header-block img{
+.header-block img {
     width: 43%;
     position: absolute;
     right: 5%;
     bottom: 2%;
 }
 
-.header-block .text{
+.header-block .text {
     position: absolute;
     bottom: 30%;
     left: 15%;
 }
 
-.header-block .text h2{
+.header-block .text h2 {
     color: white;
     margin-bottom: 20px;
     text-align: right;
@@ -125,7 +126,7 @@ nav ul button:hover{
     transition: transform 0.5s;
 }
 
-.header-block .text p{
+.header-block .text p {
     max-width: 280px;
     color: white;
     text-align: right;
@@ -135,12 +136,12 @@ nav ul button:hover{
 
 /* catalogo */
 
-section .catalog{
+section .catalog {
     width: 100vw;
     padding: 100px;
 }
 
-section .filter-card{
+section .filter-card {
     width: 980px;
     height: 150px;
     background: var(--cinza);
@@ -152,7 +153,7 @@ section .filter-card{
     justify-content: center;
 }
 
-.search-input{
+.search-input {
     width: 700px;
     height: 50px;
     border: none;
@@ -160,7 +161,7 @@ section .filter-card{
     text-indent: 10px;
 }
 
-.search-button{
+.search-button {
     width: 150px;
     height: 50px;
     border-radius: 0px 4px 4px 0px;
@@ -172,18 +173,18 @@ section .filter-card{
     transition: 0.2s ease;
 }
 
-.search-button:hover{
+.search-button:hover {
     background: #c9c9c9;
     color: var(--azul);
     border: 1px solid var(--azul);
 }
 
-.title-wrapper-catalog{
+.title-wrapper-catalog {
     margin-top: 200px;
     padding-bottom: 20px;
 }
 
-section .card-wrapper{
+section .card-wrapper {
     max-width: 1000px;
     height: 100%;
     display: grid;
@@ -192,7 +193,7 @@ section .card-wrapper{
     padding-top: 50px;
 }
 
-section .card-item{
+section .card-item {
     height: 400px;
     background: var(--cinza);
     border-radius: 8px;
@@ -202,7 +203,7 @@ section .card-item{
     justify-content: space-around;
 }
 
-.card-content{
+.card-content {
     height: 40%;
     display: flex;
     flex-direction: column;
@@ -210,21 +211,21 @@ section .card-item{
     justify-content: space-around;
 }
 
-.card-item img{
+.card-item img {
     width: 60%;
 }
 
-.card-item h4{
+.card-item h4 {
     width: 90%;
 }
 
-.card-item p{
+.card-item p {
     width: 90%;
     font-style: italic;
     color: #00000070;
 }
 
-.card-item button{
+.card-item button {
     width: 90%;
     padding: 15px 0px;
     border: none;
@@ -238,7 +239,7 @@ section .card-item{
     margin-bottom: 10px;
 }
 
-.card-item button:hover{
+.card-item button:hover {
     background: #c9c9c9;
     color: var(--azul);
     border: 1px solid var(--azul);
@@ -246,7 +247,7 @@ section .card-item{
 
 /* about */
 
-.about{
+.about {
     width: 100%;
     height: 100%;
     display: flex;
@@ -255,7 +256,7 @@ section .card-item{
     padding: 50px 10px;
 }
 
-.about-content{
+.about-content {
     max-width: 1000px;
     min-width: 300px;
     height: 624px;
@@ -270,11 +271,11 @@ section .card-item{
     justify-content: space-between;
 }
 
-.left img{
+.left img {
     width: 100%;
 }
 
-.left{
+.left {
     width: 25%;
     min-width: 300px;
     height: 100%;
@@ -282,7 +283,7 @@ section .card-item{
     border-radius: 8px;
 }
 
-.right{
+.right {
     width: 60%;
     height: 100%;
     display: flex;
@@ -292,13 +293,13 @@ section .card-item{
     padding-top: 10%;
 }
 
-.right h3{
+.right h3 {
     text-align: right;
     width: 90%;
     margin-bottom: 20px;
 }
 
-.right p{
+.right p {
     max-width: 90%;
     font-size: 1em;
     letter-spacing: 2px;
@@ -308,7 +309,7 @@ section .card-item{
 
 /* features */
 
-.features{
+.features {
     width: 100%;
     height: 100%;
     background: var(--cinza);
@@ -318,11 +319,11 @@ section .card-item{
     padding: 50px 0px;
 }
 
-.title-wrapper-features{
+.title-wrapper-features {
     padding: 20px 0px;
 }
 
-.features-card-block{
+.features-card-block {
     max-width: 1000px;
     min-width: 300px;
     height: 600px;
@@ -336,7 +337,7 @@ section .card-item{
     grid-gap: 30px;
 }
 
-.features-card-item{
+.features-card-item {
     max-width: 420px;
     height: 150px;
     display: flex;
@@ -347,14 +348,86 @@ section .card-item{
     border-radius: 4px;
 }
 
-.feature-text-content{
+.feature-text-content {
     max-width: 100%;
     margin: 5px;
 }
 
-.feature-card-item img{
+.feature-card-item img {
     width: 64px;
     height: 63px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+}
+
+footer .main {
+    width: 100%;
+    height: 200px;
+    background: var(--laranja);
+    padding: 20px 10px;
+}
+
+.footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-social {
+    color: white;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.footer-links h6{
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.socil-icons{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.main .footer-social a{
+    color: var(--azul);
+    padding: 5px;
+    text-decoration: none;
+}
+
+.main .footer-contact a{
+    color: var(--azul);
+    padding: 5px;
+    text-decoration: none;
+}
+
+footer .last{
+    width: 100%;
+    height: 50px;
+    background: var(--azul);
+    color: white;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
