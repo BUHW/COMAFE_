@@ -1,0 +1,9 @@
+Coisas que faltam para o projeto COMAFE_
+
+*encontrar novas cores para o layout, mudar as fotos e os tilulos
+
+*fazer uma paginação para o catalogo
+
+*por a imagem do whatsap fixa na na pagina para querem entrar em contato
+
+*criar janelas modal
