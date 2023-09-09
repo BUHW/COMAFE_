@@ -16,6 +16,7 @@
     --laranja: #f78b00;
     --azul: #00285f;
     --cinza: #ededed;
+    --vermelho: #ff0000;
 }
 
 html,
@@ -225,7 +226,7 @@ section .card-item {
     color: #00000070;
 }
 
-.card-item button {
+.card-item .btn {
     width: 90%;
     padding: 15px 0px;
     border: none;
@@ -239,7 +240,7 @@ section .card-item {
     margin-bottom: 10px;
 }
 
-.card-item button:hover {
+.card-item .btn:hover {
     background: #c9c9c9;
     color: var(--azul);
     border: 1px solid var(--azul);
@@ -513,4 +514,64 @@ footer .last{
         flex-direction: column;
         padding-left: 10%;
     }
+}
+
+/* JANELA MODAL */
+
+.catalog .janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed; /* Use 'fixed' para cobrir a janela inteira */
+    top: 0;
+    left: 0;
+    background-color: #00000080; /* ou remova esta linha para o padrão transparente */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.catalog .janela-modal.abrir{
+    display: flex;
+}
+
+.catalog .modal{
+    width: 60%;
+    min-width: 300px;
+    min-height: 200px;
+    background-color: #ffffff96;
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+    margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+.catalog .fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    background-color: var(--vermelho);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@keyframes abrirmodal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.catalog .abrir .modal{
+    animation: abrirmodal 0.5s;
 }
