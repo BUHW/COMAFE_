@@ -6,4 +6,6 @@ Coisas que faltam para o projeto COMAFE_
 
 *por a imagem do whatsap fixa na na pagina para querem entrar em contato
 
-*criar janelas modal
+ - criar janelas modal
+
+ - botao pesquisa

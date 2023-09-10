@@ -122,7 +122,7 @@ nav ul button:hover {
 .header-block .text h2 {
     color: white;
     margin-bottom: 20px;
-    text-align: right;
+    text-align: justify;
     transform: translateX(-20px);
     transition: transform 0.5s;
 }
@@ -130,7 +130,7 @@ nav ul button:hover {
 .header-block .text p {
     max-width: 280px;
     color: white;
-    text-align: right;
+    text-align: left;
     transform: translateX(-20px);
     transition: transform 0.4s;
 }
@@ -531,6 +531,10 @@ footer .last{
     z-index: 9999;
 }
 
+.catalog .janela-modal .modal h4{
+    margin: 15px 0px;
+}
+
 .catalog .janela-modal.abrir{
     display: flex;
 }
@@ -574,4 +578,10 @@ footer .last{
 
 .catalog .abrir .modal{
     animation: abrirmodal 0.5s;
+}
+
+/* pesquisa */
+
+.catalog .card-item.oculto {
+    display: none;
 }
