@@ -13,8 +13,8 @@
 }
 
 :root {
-    --laranja: #f78b00;
-    --azul: #00285f;
+    --laranja: #ffae39;
+    --azul: #071a45;
     --cinza: #ededed;
     --vermelho: #ff0000;
 }
@@ -26,9 +26,24 @@ body {
 }
 
 header {
-    width: 100%;
-    height: 500px;
-    background: var(--laranja);
+    position: relative;
+    height: 400px;
+}
+
+.background-images {
+    max-width: 1500px;
+    min-width: 1500px;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%; /* 100% + 100% para acomodar as duas imagens lado a lado */
+}
+
+.background-image {
+    width: 50%;
+    height: 100%;
 }
 
 .content {
@@ -41,17 +56,19 @@ header {
 }
 
 nav {
+    background-color: #071a45;
     width: 100%;
-    height: 125px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 30px;
 }
 
 .brand {
-    font-size: 24px;
-    color: var(--azul);
+    width: auto;
+    height: 50px;
     cursor: pointer;
 }
 
@@ -67,21 +84,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--azul);
+    color: white;
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #00285783;
-}
-
 nav ul button {
-    border: 1px solid var(--azul);
+    border: 1px solid white;
     background: transparent;
     padding: 8px 40px;
     cursor: pointer;
     margin-left: 30px;
-    color: var(--azul);
+    color: white;
     font-weight: bold;
     border-radius: 4px;
 }
@@ -93,43 +106,48 @@ nav ul button:hover {
 }
 
 .content .header-block {
+    background-image: url(../../img/fotoHeaderBlock.png);
+    margin-top: 6rem;
     max-width: 1000px;
     min-height: 300px;
+    width: 100%;
     height: 450px;
-    background: var(--azul);
-    border-radius: 8px;
+    background-color: #ffae39;
+    border-radius: 30px 0px;
     box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 10;
-    padding: 10px;
+    padding: 5px;
 }
 
 .header-block img {
-    width: 43%;
+    width: 20%;
     position: absolute;
-    right: 5%;
-    bottom: 2%;
+    right: 7%;
+    bottom: 30%;
 }
 
 .header-block .text {
     position: absolute;
-    bottom: 30%;
-    left: 15%;
+    bottom: 25%;
+    left: 10%;
 }
 
 .header-block .text h2 {
-    color: white;
+    color: black;
     margin-bottom: 20px;
-    text-align: justify;
+    text-align: left;
     transform: translateX(-20px);
     transition: transform 0.5s;
+    font-size: 30px;
 }
 
 .header-block .text p {
-    max-width: 280px;
-    color: white;
+    max-width: 550px;
+    font-size: 20px;
+    color: black;
     text-align: left;
     transform: translateX(-20px);
     transition: transform 0.4s;
@@ -447,11 +465,12 @@ footer .last{
     .text{
         position: absolute;
         bottom: 10%;
-        left: 15%;   
+        left: 15%; 
+          
     }
 
     section .filter-card{
-        width: 390px;
+        width: 350px;
         padding: 0px 10px;
     }
 
