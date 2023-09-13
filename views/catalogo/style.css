@@ -73,6 +73,8 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #00285783;
+    border-bottom: 2px solid #00285783;
+    
 }
 
 nav ul button {
