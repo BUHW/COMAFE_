@@ -26,6 +26,8 @@ body {
 }
 
 header {
+    background-color: var(--laranja);
+    background-image: url(../../img/fotoHeaderBlock.png);
     position: relative;
     height: 400px;
 }
@@ -109,13 +111,13 @@ nav ul button:hover {
 }
 
 .content .header-block {
-    background-image: url(../../img/fotoHeaderBlock.png);
+    /* background-image: url(../../img/fotoHeaderBlock.png); */
     margin-top: 6rem;
     max-width: 1000px;
     min-height: 300px;
     width: 100%;
     height: 450px;
-    background-color: #ffae39;
+    background-color: var(--azul);
     border-radius: 30px 0px;
     box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -139,7 +141,7 @@ nav ul button:hover {
 }
 
 .header-block .text h2 {
-    color: black;
+    color: white;
     margin-bottom: 20px;
     text-align: left;
     transform: translateX(-20px);
@@ -150,7 +152,7 @@ nav ul button:hover {
 .header-block .text p {
     max-width: 550px;
     font-size: 20px;
-    color: black;
+    color: white;
     text-align: left;
     transform: translateX(-20px);
     transition: transform 0.4s;
@@ -291,6 +293,7 @@ section .card-item {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1rem;
 }
 
 .left img {
@@ -346,7 +349,7 @@ section .card-item {
     padding: 20px 0px;
 }
 
-.features-card-block {
+.features .features-card-block {
     max-width: 1000px;
     min-width: 300px;
     height: 600px;
@@ -360,14 +363,13 @@ section .card-item {
     grid-gap: 30px;
 }
 
-.features-card-item {
+.features .feature-card-item {
     max-width: 420px;
     height: 150px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid #c9c9c9;
     border-radius: 4px;
 }
 
@@ -378,9 +380,8 @@ section .card-item {
 
 .feature-card-item img {
     width: 64px;
-    height: 63px;
-    align-items: center;
-    justify-content: center;
+    height: 64px;
+    margin-right: 1rem;
 }
 
 footer {
@@ -539,6 +540,17 @@ footer .last{
     }
 }
 
+@media(max-width: 480px){
+
+    .header-block .text h2{
+        font-size: 22px;
+    }
+
+    .header-block .text p{
+        font-size: 18px;
+    }
+}
+
 /* JANELA MODAL */
 
 .catalog .janela-modal{
@@ -571,6 +583,23 @@ footer .last{
     padding: 50px;
     border-radius: 20px;
     margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+.catalog .btn-add-carrinho{
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: var(--laranja);
+    background-color: var(--azul);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.catalog .btn-add-carrinho:hover{
+    background-color: #0e2763;
 }
 
 .catalog .fechar{
@@ -607,4 +636,80 @@ footer .last{
 
 .catalog .card-item.oculto {
     display: none;
+}
+
+/* botao whats */
+
+.whats{
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9999;
+    background-color: #0dc043;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.whats i{
+    font-size: 40px;
+    color: white;
+    
+}
+
+.whats:hover{
+    height: 75px;
+    width: 75px;
+}
+
+#whatsappModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.numeroWhatsapp {
+    margin: 10px 0;
+    padding: 0.5rem;
+    color: var(--azul);
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.fechar-whats{
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--azul);
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.fechar-whats:hover{
+    color: var(--laranja);
+    border: 2px solid var(--laranja);
 }
