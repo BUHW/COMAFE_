@@ -84,41 +84,48 @@ function toggleDiv(divId) {
         if (divAtualmenteVisivel !== null) {
             divAtualmenteVisivel.style.display = "none";
         }
-        div.style.display = "flex";
+        div.style.display = "block";
         divAtualmenteVisivel = div;
     }
 }
 
 document.getElementById("btn-inox").addEventListener("click", function () {
-    toggleDiv("inox");
+    toggleDiv("content-inox");
 });
 
-document.getElementById("btn-qualidade").addEventListener("click", function () {
-    toggleDiv("sobrenos");
+document.getElementById("btn-chato").addEventListener("click", function () {
+    toggleDiv("content-chato");
 });
 
-document.getElementById("btn-sgo").addEventListener("click", function () {
-    toggleDiv("qualid");
+document.getElementById("btn-brocante").addEventListener("click", function () {
+    toggleDiv("content-brocante");
 });
 
-document.getElementById("btn-rh").addEventListener("click", function () {
-    toggleDiv("rh");
+document.getElementById("btn-zin-branco").addEventListener("click", function () {
+    toggleDiv("content-zin-branco");
 
 });
 
-
-document.getElementById("btn-segtra").addEventListener("click", function () {
-    toggleDiv("segtra");
-});
-
-
-document.getElementById("btn-beneficios").addEventListener("click", function () {
-    toggleDiv("beneficios");
+document.getElementById("btn-zin-amarelo").addEventListener("click", function () {
+    toggleDiv("content-zin-amarelo");
 });
 
 
-document.getElementById("btn-canden").addEventListener("click", function () {
-    toggleDiv("canald");
+document.getElementById("btn-ponta-agulha").addEventListener("click", function () {
+    toggleDiv("content-ponta-agulha");
+});
+
+
+document.getElementById("btn-maquina").addEventListener("click", function () {
+    toggleDiv("content-maquina");
+});
+
+document.getElementById("btn-arruelas").addEventListener("click", function () {
+    toggleDiv("content-arruelas");
+});
+
+document.getElementById("btn-porcas").addEventListener("click", function () {
+    toggleDiv("content-porcas");
 });
 
 

@@ -208,13 +208,51 @@ nav ul button:hover {
 
 /* catalogo */
 
-.catalog .content{
+#content-inox{
     display: none;
 }
+
+#content-chato{
+    display: none;
+}
+
+#content-brocante{
+    display: none;
+}
+
+#content-zin-branco{
+    display: none;
+}
+
+#content-zin-amarelo{
+    display: none;
+}
+
+#content-ponta-agulha{
+    display: none;
+}
+
+#content-maquina{
+    display: none;
+}
+
+#content-arruelas{
+    display: none;
+}
+
+#content-porcas{
+    display: none;
+}
+
+
+/* .catalog .content{
+    display: none;
+} */
 
 section .catalog {
     width: 100vw;
     padding: 100px;
+    display: none;
 }
 
 section .filter-card {
