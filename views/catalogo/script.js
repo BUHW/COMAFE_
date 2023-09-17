@@ -1,102 +1,14 @@
 // Janela modal
 
-function abrirModal(){
-    const modal = document.getElementById('janela-modal')
-    modal.classList.add('abrir')
+function abrirModal(numero) {
+    const modal = document.getElementById(`janela-modal${numero}`);
+    modal.classList.add('abrir');
 
     modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar' || e.target.id == 'janela-modal'){
-            modal.classList.remove('abrir')
+        if (e.target.id == `fechar${numero}` || e.target.id == `janela-modal${numero}`) {
+            modal.classList.remove('abrir');
         }
-    })
-}
-
-function abrirModal1(){
-    const modal = document.getElementById('janela-modal1')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar1' || e.target.id == 'janela-modal1'){
-            modal.classList.remove('abrir')
-        }
-    })
-}
-
-function abrirModal2(){
-    const modal = document.getElementById('janela-modal2')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar2' || e.target.id == 'janela-modal2'){
-            modal.classList.remove('abrir')
-        }
-    })
-}
-
-function abrirModal3(){
-    const modal = document.getElementById('janela-modal3')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar3' || e.target.id == 'janela-modal3'){
-            modal.classList.remove('abrir')
-        }
-    })
-}
-
-function abrirModal4(){
-    const modal = document.getElementById('janela-modal4')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar4' || e.target.id == 'janela-modal4'){
-            modal.classList.remove('abrir')
-        }
-    })
-}
-
-function abrirModal5(){
-    const modal = document.getElementById('janela-modal5')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar5' || e.target.id == 'janela-modal5'){
-            modal.classList.remove('abrir')
-        }
-    })
-}
-
-function abrirModal6(){
-    const modal = document.getElementById('janela-modal6')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar6' || e.target.id == 'janela-modal6'){
-            modal.classList.remove('abrir')
-        }
-    })
-}
-
-function abrirModal7(){
-    const modal = document.getElementById('janela-modal7')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar7' || e.target.id == 'janela-modal7'){
-            modal.classList.remove('abrir')
-        }
-    })
-}
-
-function abrirModal8(){
-    const modal = document.getElementById('janela-modal8')
-    modal.classList.add('abrir')
-
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'fechar8' || e.target.id == 'janela-modal8'){
-            modal.classList.remove('abrir')
-        }
-    })
+    });
 }
 
 // Btn buscar
@@ -153,5 +65,61 @@ document.getElementById('numeroWhatsapp').addEventListener('change', function() 
 
     // Fechar o modal após a seleção do número
     document.getElementById('whatsappModal').style.display = 'none';
+
+    location.reload();
 });
+
+
+// aparecer div
+
+var divAtualmenteVisivel = null;
+
+function toggleDiv(divId) {
+    var div = document.getElementById(divId);
+
+    if (div === divAtualmenteVisivel) {
+        div.style.display = "none";
+        divAtualmenteVisivel = null;
+    } else {
+        if (divAtualmenteVisivel !== null) {
+            divAtualmenteVisivel.style.display = "none";
+        }
+        div.style.display = "flex";
+        divAtualmenteVisivel = div;
+    }
+}
+
+document.getElementById("btn-inox").addEventListener("click", function () {
+    toggleDiv("inox");
+});
+
+document.getElementById("btn-qualidade").addEventListener("click", function () {
+    toggleDiv("sobrenos");
+});
+
+document.getElementById("btn-sgo").addEventListener("click", function () {
+    toggleDiv("qualid");
+});
+
+document.getElementById("btn-rh").addEventListener("click", function () {
+    toggleDiv("rh");
+
+});
+
+
+document.getElementById("btn-segtra").addEventListener("click", function () {
+    toggleDiv("segtra");
+});
+
+
+document.getElementById("btn-beneficios").addEventListener("click", function () {
+    toggleDiv("beneficios");
+});
+
+
+document.getElementById("btn-canden").addEventListener("click", function () {
+    toggleDiv("canald");
+});
+
+
 
