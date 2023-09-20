@@ -1,4 +1,5 @@
 const express = require('express');
+const hostname = '192.168.300.02';
 const app = express();
 const port = 8090;
 const path = require('path');
@@ -6,22 +7,28 @@ const path = require('path');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const servidor = path.join(__dirname, '/catalogo')
+const servidor = path.join(__dirname, '/views');
 
-app.get('/', express.static(servidor));
 
-app.get('/catalogo', async function (req, res) {
-    res.render(path.join(servidor, 'catalogo.html'));
+app.use('/img', express.static(path.join(__dirname + '/img')));
+app.use(express.static(servidor));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(servidor, 'landingPage/index.html'));
 });
 
 app.get('/style.css', (req, res) => {
-    res.sendFile(__dirname + '/catalogo/style.css');
+    res.sendFile(path.join(servidor, 'landingPage/style.css'));
 });
-  
-  app.get('/app.js', (req, res) => {
-    res.sendFile(__dirname + '/catalogo/app.js');
+
+app.get('/script.js', (req, res) => {
+    res.sendFile(path.join(servidor, 'landingPage/script.js'));
+});
+
+app.get('/img', (req, res) => {
+    res.sendFile(path.join(__dirname, '/img'));
 });
 
 app.listen(port, () =>{ 
-    console.log('Servidor funfando legal');
+    console.log(`Servidor funfando legal no http://${hostname}:${port}`);
 });
